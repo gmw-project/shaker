@@ -8,8 +8,8 @@ ENV TZ=Asia/Jakarta
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 #llvm
-RUN wget https://github.com/najahiiii/Noob-Script/raw/noob/setup/che-llvm.repo
-RUN wget https://github.com/najahiiii/Noob-Script/raw/noob/setup/lantw44-toolchains.repo
+CMD wget https://github.com/najahiiii/Noob-Script/raw/noob/setup/che-llvm.repo
+CMD wget https://github.com/najahiiii/Noob-Script/raw/noob/setup/lantw44-toolchains.repo
 
 COPY che-llvm.repo /etc/yum.repos.d/
 COPY lantw44-toolchains.repo /etc/yum.repos.d/
