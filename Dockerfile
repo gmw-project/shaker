@@ -15,8 +15,8 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 #COPY lantw44-toolchains.repo /etc/yum.repos.d/
 
 RUN dnf install -y \
-	aarch64-linux-gnu-{binutils,gcc,glibc} \
-	arm-linux-gnueabi-{binutils,gcc,glibc} \
+#	aarch64-linux-gnu-{binutils,gcc,glibc} \
+#	arm-linux-gnueabi-{binutils,gcc,glibc} \
 	bc \
 	bison \
 	clang \
