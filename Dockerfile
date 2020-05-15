@@ -1,4 +1,4 @@
-# Use Fedora latest (31)
+# Use Fedora latest
 # credits to GitHub @najahiiii
 FROM fedora:latest
 LABEL maintainer "goodmeow(Harun) <harunbam3@gmail.com>"
