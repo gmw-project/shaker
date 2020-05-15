@@ -8,11 +8,11 @@ ENV TZ=Asia/Jakarta
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 #llvm
-CMD wget https://github.com/najahiiii/Noob-Script/raw/noob/setup/che-llvm.repo
-CMD wget https://github.com/najahiiii/Noob-Script/raw/noob/setup/lantw44-toolchains.repo
+#CMD wget https://github.com/najahiiii/Noob-Script/raw/noob/setup/che-llvm.repo
+#CMD wget https://github.com/najahiiii/Noob-Script/raw/noob/setup/lantw44-toolchains.repo
 
-COPY che-llvm.repo /etc/yum.repos.d/
-COPY lantw44-toolchains.repo /etc/yum.repos.d/
+#COPY che-llvm.repo /etc/yum.repos.d/
+#COPY lantw44-toolchains.repo /etc/yum.repos.d/
 
 RUN dnf install -y \
 	aarch64-linux-gnu-{binutils,gcc,glibc} \
@@ -44,6 +44,6 @@ RUN dnf install -y \
 RUN git config --global user.email "harunbam3@gmail.com"
 RUN git config --global user.name "goodmeow"
 
-#RUN git clone https://github.com/NusantaraDevs/clang.git -b dev/11.0 --depth=1 --single-branch /root/clang
+RUN git clone https://github.com/NusantaraDevs/clang.git -b dev/11.0 --depth=1 --single-branch /root/clang
 
 CMD ["/bin/bash"]
