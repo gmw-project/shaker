@@ -44,6 +44,6 @@ RUN dnf install -y \
 RUN git config --global user.email "harunbam3@gmail.com"
 RUN git config --global user.name "goodmeow"
 
-RUN git clone https://github.com/NusantaraDevs/clang.git -b dev/11.0 --depth=1 --single-branch /root/clang
+RUN git clone https://github.com/kdrag0n/proton-clang -b master --depth=1 --single-branch /root/clang
 
 CMD ["/bin/bash"]
