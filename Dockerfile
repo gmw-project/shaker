@@ -11,8 +11,8 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 CMD wget https://github.com/najahiiii/Noob-Script/raw/noob/setup/che-llvm.repo
 CMD wget https://github.com/najahiiii/Noob-Script/raw/noob/setup/lantw44-toolchains.repo
 
-CMD cp che-llvm.repo /etc/yum.repos.d/
-CMD cp lantw44-toolchains.repo /etc/yum.repos.d/
+COPY che-llvm.repo /etc/yum.repos.d/
+COPY lantw44-toolchains.repo /etc/yum.repos.d/
 
 RUN dnf install -y \
 	aarch64-linux-gnu-{binutils,gcc,glibc} \
